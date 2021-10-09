@@ -3,21 +3,28 @@ let contenido = document.getElementById("contenido");
 let form1 = document.getElementById("form1");
 form1.addEventListener("submit", (e) => {
   e.preventDefault();
-  let json = {
-    nombre: `${document.getElementById("nombre").value}`,
-    apellido: `${document.getElementById("apellido").value}`,
-    telefono: `${document.getElementById("telefono").value}`,
-  };
-  console.log(JSON.stringify(json));
-  fetch("http://www.raydelto.org/agenda.php", {
-    method: "POST",
-    body: JSON.stringify(json),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      table();
-      console.log(data);
-    });
+  let name = document.getElementById("nombre").value;
+  let lastName = document.getElementById("apellido").value;
+  let tel = document.getElementById("telefono").value;
+  if (name != "" && lastName != "" && tel != "") {
+    let json = {
+      nombre: name,
+      apellido: lastName,
+      telefono: tel,
+    };
+    console.log(JSON.stringify(json));
+    fetch("http://www.raydelto.org/agenda.php", {
+      method: "POST",
+      body: JSON.stringify(json),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        table();
+        console.log(data);
+      });
+  } else {
+    alert("Debe llenar todos los campos!!");
+  }
 });
 
 function table() {
