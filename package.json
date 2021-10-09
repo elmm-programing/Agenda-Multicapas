@@ -1,0 +1,14 @@
+{
+  "name": "agenda-multicapas",
+  "version": "1.0.0",
+  "description": "Agenda web que permitira listar y agregar usuarios",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./js/index.js"
+  },
+  "author": "ELMM",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

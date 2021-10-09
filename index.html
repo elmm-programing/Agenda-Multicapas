@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="section1">
+        <h1>Agregar usuario</h1>
+        <form id="form1">
+          <h3>Nombre:</h3>
+          <input type="text" name="nombre" id="nombre" placeholder="nombre" />
+          <h3>Apellido:</h3>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="apellido"
+          />
+          <h3>Telefono:</h3>
+          <input
+            type="text"
+            name="telefono"
+            id="telefono"
+            placeholder="telefono"
+          />
+          <input type="submit" value="Insertar" />
+        </form>
+      </div>
+      <div class="section2">
+        <h1 class="table-h1">Lista de Usuarios</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody id="contenido"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>
